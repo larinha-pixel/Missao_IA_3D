@@ -6,74 +6,101 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Você tem um futuro inteiro pela frente, mas para fazer suas próprias escolhas, precisa de segurança financeira. Qual sua visão sobre isso?",
-        alternativas:[    
-        {
-                texto: "Vou depender dos meus pais para sempre",
-                afirmacao: "afirmacao"
+        enunciado:
+            "Você tem um futuro inteiro pela frente, mas para seguir a carreira dos seus sonhos, precisa decidir qual caminho acadêmico trilhar. Qual sua visão sobre isso?",
+        alternativas: [
+
+            {
+                texto: "Ainda não sei o que fazer e vou deixar a vida me levar.",
+                afirmacao: [
+                    "Sou herdeiro(a)",
+                    "Não acredito que estudos pagam as contas",
+                ],
             },
             {
-                texto: "Quero conquistar minha liberdade financeira!",
-                afirmacao: "afirmacao"
-            }           
-            
-        ]
+                texto: "Quero pesquisar bem as opções e escolher a faculdade certa para mim!",
+                afirmacao: [
+                    "Quero construir minha própria independência financeira",
+                    "Acredito que o conhecimento abre as melhores portas no mercado",
+                ],
+            },
+        ],
     },
     {
-        enunciado: "Primeiramente, você deve estar disposto a reservar um pouco do seu dinheiro para investir.É necessário pensar no futuro. Quantos % da sua renda mensal você pretende separar para investir?",
-        alternativas: [
+        "enunciado": "Primeiramente, você deve estar disposto a reservar um pouco do seu tempo diário para se dedicar aos estudos. É necessário pensar no seu futuro profissional. Quantas horas por dia você pretende separar para focar na faculdade?",
+        "alternativas": [
             {
-                texto:"Consigo reservar 30% da minha renda mensal para investimentos",
-                afirmacao:"afirmacao"
+                "texto": "Consigo reservar 3 horas ou mais do meu dia para os estudos da faculdade.",
+                "afirmacao": [
+                    "Sou focado(a) e priorizo meu crescimento rápido",
+                    "Entendo que o esforço diário é o que traz o resultado"
+                ]
             },
             {
-                texto: "Consigo reservar no máximo 10% da minha renda. Mas me comprometo a sempre investir mais se conseguir.",
-                afirmacao:"afirmacao"
-            }
-        ]
+                "texto": "Consigo reservar no máximo 1 hora por dia. Mas me comprometo a estudar mais nos finais de semana se precisar.",
+                "afirmacao": [
+                    "Minha rotina é corrida e preciso conciliar com outras obrigações",
+                    "Prefiro qualidade de estudo concentrada do que quantidade de tempo",
+             ],
+            },
+        ],
     },
     {
-        enunciado: "Para invetirmos, temos a opção de sermos investidores mais conservadores ou mais arrojados. Os conservadores preferem investir em renda fixa e os arrojados em renda variável. Qual você prefere?",
-        alternativas: [
+        "enunciado": "Para escolhermos uma faculdade, temos a opção de seguir caminhos mais tradicionais e estáveis ou buscar áreas mais dinâmicas e incertas. Os perfis conservadores preferem cursos com alta previsibilidade de carreira e os arrojados preferem focar em inovação ou novos mercados. Qual você prefere?",
+        "alternativas": [
             {
-                texto:"Prefiro investir em renda fixa, pois gosto de ter mais segurança e previsibilidade nos investimentos.",
-                afirmacao:"afirmacao"
+                "texto": "Prefiro escolher um curso tradicional com alta estabilidade, pois gosto de ter mais segurança e previsibilidade no meu futuro profissional.",
+                "afirmacao": [
+                    "Valorizo a tranquilidade de um plano de carreira seguro",
+                    "Prefiro o garantido do que arriscar meu futuro no incerto",
+                ],
             },
             {
-                texto:"Meu perfil é mais arrojado, e não me importo em correr riscos em prol de uma maior rentabilidade.",
-                afirmacao:"afirmacao"
-            }
-            
-        ]
+                "texto": "Meu perfil é mais arrojado, e não me importo em assumir os riscos de um mercado dinâmico ou inovador em prol de uma maior realização e flexibilidade.",
+                "afirmacao": [
+                    "Detesto a ideia de uma rotina presa e monótona",
+                    "Quero criar minhas próprias oportunidades e inovar",
+             ],
+            },
+        ],
     },
     {
-        enunciado: "De acordo com o seu perfil de investidor, escolha os tipos de investimento que você prefere investir.",
-        alternativas: [
+        "enunciado": "De acordo com o seu perfil profissional, escolha os tipos de cursos ou carreiras universitárias que você prefere seguir.",
+        "alternativas": [
             {
-                texto:"Quero investir em ações, fundos imobiliários e BDRs. Aceito o maior risco e a imprevisibilidade para aumentar meus resultados",
-                afirmacao:"afirmacao"
+                "texto": "Quero focar em cursos ligados a tecnologia, novos mercados e inovação. Aceito a volatilidade do mercado de trabalho e o risco para acelerar meus resultados e ter maior autonomia.",
+                "afirmacao": [
+                    "Quero estar na vanguarda da transformação digital",
+                    "Acredito que o maior risco traz a maior recompensa"
+                ]
             },
             {
-                texto:"Prefiro investir em .",
-                afirmacao:"afirmacao"
-            }
-            
-        ]
+                "texto": "Prefiro ingressar em cursos tradicionais e concursos públicos. Priorizo carreiras consolidadas que oferecem maior estabilidade, segurança e previsibilidade financeira a longo prazo.",
+                "afirmacao": [
+                    "A estabilidade financeira é a base para o meu sucesso",
+                    "Prefiro caminhos testados e aprovados pelo tempo",
+      ],
+            },
+        ],
     },
     {
-        enunciado: " Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
-        alternativas: [
+        "enunciado": "Você tem um trabalho em grupo de biologia para entregar na semana seguinte, o andamento do trabalho está um pouco atrasado e uma pessoa do seu grupo decidiu fazer com ajuda de uma IA. O problema é que o trabalho está totalmente igual ao do chat. O que você faz?",
+        "alternativas": [
             {
-                texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
-                afirmacao:"afirmacao"
+                "texto": "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
+                "afirmacao": [
+                    "Prezo pela autenticidade e qualidade do que entrego",
+                    "Uso a tecnologia como ferramenta, não como substituta do meu cérebro",
+                ],
             },
             {
-                texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao:"afirmacao"
-            }
-            
-            
-        ]
+                "texto": "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
+                "afirmacao": [
+                    "Foco em eficiência e otimização de tempo acima de tudo",
+                    "Se a ferramenta resolve o problema rapidamente, deve ser aproveitada",
+             ],
+            },
+        ],
     },
 ];
 
